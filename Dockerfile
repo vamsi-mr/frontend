@@ -31,9 +31,6 @@ RUN touch /var/run/nginx.pid \
 # Copy custom nginx config and static files
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY static /usr/share/nginx/html/
-# Switch to non-root user
-USER nginx
-# Expose port 8080
-EXPOSE 8080
+
 # Start nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
