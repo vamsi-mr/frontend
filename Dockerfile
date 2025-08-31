@@ -32,7 +32,7 @@ RUN touch /var/run/nginx.pid \
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY static /usr/share/nginx/html/
 # Switch to non-root user
-USER nginx
+# USER nginx
 # Expose port 80
 EXPOSE 80
 # Start nginx in foreground
